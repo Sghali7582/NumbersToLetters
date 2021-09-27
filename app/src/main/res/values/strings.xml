@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">NumbersToLetters</string>
+    <string name="instructionsText">Introduce un número de hasta 9 cifras.</string>
 </resources>

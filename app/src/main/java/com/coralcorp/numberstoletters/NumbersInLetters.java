@@ -148,7 +148,6 @@ public class NumbersInLetters {
         }
         return builder.toString();
     }
-
     public String milesOMillones(int i, boolean miles, boolean lastDigits) {
         StringBuilder builder = new StringBuilder();
 
@@ -166,11 +165,8 @@ public class NumbersInLetters {
         } else {
             builder.append(centenas(i, false, false));
         }
-        if (miles) {
-            builder.append(" mil ");
-        } else {
-            builder.append(" millones");
-        }
+        if (miles) builder.append(" mil ");
+        else builder.append(" millones");
         return builder.toString();
     }
 }

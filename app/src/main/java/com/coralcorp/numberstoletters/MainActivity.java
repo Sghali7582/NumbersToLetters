@@ -10,8 +10,8 @@
  * Software.
  *
  * THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
- * WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
- *  COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+ * WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS
+ * OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
  * OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
@@ -30,14 +30,11 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
     StringBuilder builder;
     EditText numberInAndroid;
     NumbersInLetters convert;
-
-
     int length;
     String number;
     int firstThree; // numbers between 10^9 and 10^7
     int secondThree; // numbers between 10^6 and 10^4
     int lastThree; // numbers between 10^3 and 0
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +46,6 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
         numberInAndroid = findViewById(R.id.number);
         number = numberInAndroid.getText().toString();
         numberInAndroid.addTextChangedListener(this);
-
     }
 
     public void separar() {
@@ -67,7 +63,6 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
                 lastThree = Integer.parseInt(number.substring(length - 3));
                 solitas = false;
             }
-
             if (length > 3) {
                 int m = length - 3;
                 if (m > 3) m = m - 3;
@@ -75,8 +70,6 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
             }
             if (length > 6)
                 firstThree = Integer.parseInt(number.substring(0, length - 6));
-
-
             if (length > 6)
                 builder.append(convert.milesOMillones(firstThree, false, false));
             if (length > 3)
@@ -85,17 +78,10 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
         }
     }
 
-
     @Override
-    public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-    }
-
+    public void onTextChanged(CharSequence s, int start, int before, int count) {}
     @Override
-    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-    }
-
+    public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
     @Override
     public void afterTextChanged(Editable s) {
         builder.delete(0, builder.toString().length());

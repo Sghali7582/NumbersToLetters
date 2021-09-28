@@ -39,7 +39,7 @@
                     android:ems="10"
                     android:id="@+id/number"
                     android:autofillHints="N\u00FAmero a convertir."
-                    tools:ignore="LabelFor"/>
+                    tools:ignore="LabelFor" android:gravity="center"/>
         </TableRow>
         <TableRow android:layout_width="match_parent" android:layout_height="match_parent"
                   android:id="@+id/SpaceRow3" android:gravity="center">
@@ -51,7 +51,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" android:gravity="center">
             <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="289dp"
                     android:layout_height="wrap_content" android:id="@+id/answer" android:gravity="center"/>
         </TableRow>
     </TableLayout>
